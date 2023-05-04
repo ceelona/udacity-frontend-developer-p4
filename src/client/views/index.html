@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+    <head>
+        <meta charset="utf-8">
+        <title>NLP</title>
+    </head>
+
+    <body>
+        <article>
+            <header>
+                <h1>P04 - NLP</h1>
+            </header>
+
+            <main>
+                <section class="form-container">
+                    <form onsubmit="Client.handleSubmit(event)">
+                        <p>Please insert an URL.</p>
+                        <input id="url" type="url" name="url" placeholder="Insert an article URL">
+                        <button id="submit" type="submit" name="submit" value="submit" onclick="return Client.handleSubmit(event)" onsubmit="return Client.handleSubmit(event)">Submit</button>
+                    </form>
+                </section>
+
+                <section class="results-container">
+                    <h2>Results</h2>
+                        <table>
+                            <tr>
+                                <th>Agreement</th>
+                                <th>Subjectivity</th>
+                                <th>Confidence</th>
+                                <th>Irony</th>
+                            </tr>
+                            <tr>
+                                <th id="agreement"></th>
+                                <th id="subjectivity"></th>
+                                <th id="confidence"></th>
+                                <th id="irony"></th>
+                            </tr>
+                        </table>
+                        <p id="text"></p>
+                </section>
+            </main>
+
+            <footer>
+                <p>Made by Jennifer Kuemmele</p>
+            </footer>
+        </article>
+        
+        <script>
+            if ('serviceWorker' in navigator) {
+                window.addEventListener('load', () => {
+                    navigator.serviceWorker.register('/service-worker.js');
+                });
+            }
+        </script>    
+    </body>
+</html>

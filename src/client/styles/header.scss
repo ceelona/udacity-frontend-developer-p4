@@ -1,0 +1,10 @@
+header {
+    grid-area: hd;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 1rem;
+    background-color: #536878; color: #fff;
+    height: 50px;
+}
